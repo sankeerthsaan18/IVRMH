@@ -1,5 +1,16 @@
 package models.casino;
 
+import java.util.*;
+import javax.persistence.*;
+
+
+import play.data.binding.*;
+import play.data.validation.*;
+
+import play.db.jpa.Model;
+
+
+
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -10,9 +21,15 @@ import siena.Id;
 import siena.embed.Embedded;
 import casino.BCrypt;
 import casino.Casino;
+import java.util.Date;
+import play.data.validation.Required;
 
 public class User extends EnhancedModel {
 
+   
+
+           
+       
 	@Id(Generator.AUTO_INCREMENT)
 	public Long id;
 
@@ -23,7 +40,8 @@ public class User extends EnhancedModel {
 	public String confirmationCode;
 
 	public String recoverPasswordCode;
-
+@Required
+    public Date postedAt;
 
 	/**
 	 * A simple String based role checking.
@@ -52,7 +70,7 @@ public class User extends EnhancedModel {
 		this.email = email;
 		this.pwHash = Casino.getHashForPassword(password);
 		this.confirmationCode = Casino.shortUUID();
-
+                this.postedAt = new Date();
 		this.roles = new ArrayList<String>();
 		
 	}
@@ -120,7 +138,8 @@ public class User extends EnhancedModel {
 		return roles;
 		
 	}
-
+  
+ 
 
 
 }

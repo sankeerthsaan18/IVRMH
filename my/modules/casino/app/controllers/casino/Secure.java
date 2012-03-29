@@ -5,6 +5,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
 import play.Play;
+import play.data.validation.Email;
 import play.data.validation.Required;
 import play.libs.Crypto;
 import play.mvc.Before;
@@ -42,7 +43,10 @@ public class Secure extends Controller {
             check(check);
         }
     }
-
+ public static void index(@Email String email){
+     
+     render(email);
+ }
     private static void check(Check check) throws Throwable {
         for(String profile : check.value()) {
             boolean hasProfile = (Boolean)Security.invoke("check", profile);
@@ -75,7 +79,7 @@ public class Secure extends Controller {
 
     public static void authenticate(@Required String username, String password, boolean remember) throws Throwable {
         // Check tokens
-    	
+    	String use=username;
         Boolean allowed = false;
         try {
             // This is the deprecated method name
@@ -100,7 +104,7 @@ public class Secure extends Controller {
         }
         // Redirect to the original URL (or /)
         flash.success("Welcome %s", username);
-        redirect("/i");
+        index(use);
     }
 
     public static void logout() throws Throwable {

@@ -15,12 +15,12 @@ import play.db.jpa.JPABase;
 import play.db.jpa.Model;
 
 @Entity
-public class tab extends Model {
+public class str extends Model {
  @Required
 	public String username;
 
  @Required	
-	public int phno;
+	public String phno;
 	
 @Required
     public Date postedAt;
@@ -31,7 +31,7 @@ public class tab extends Model {
 
     public User use;
 
-	public tab(User use,String username,int phno) {
+	public str(User use,String username,String phno) {
                  this.use=use;
 		this.username = username;
 		 this.postedAt = new Date();
@@ -39,6 +39,8 @@ public class tab extends Model {
        this.save();
                        
 	}
+
+    
 
    
  

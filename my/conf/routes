@@ -4,7 +4,7 @@
 
 # Home page
 GET     /                                       Application.index1
-GET     /i                                       Application.index
+GET     /i                                       casino.Secure.index
 POST    /i                                       Application.store
 GET     /selection                              Application.selection
 GET     /D                                       Application.DET

@@ -7,13 +7,13 @@
  <div class="topbar-inner">      
   <div class="container-fluid"> 
      <ul class="pills">     
-     <li><a class="brand" href="@{Application.index()}" class="active">IVR WIDGETS</a></li>             
+     <li><a class="brand" href="i" class="active">IVR WIDGETS</a></li>             
  <li ><a href="@{Application.wedding()}" >WEDDINGS</a></li>          
   <li><a href="@{Application.medical()}" >MEDICAL ENQUIRIES</a></li>      
       <li><a href="@{Application.fest()}">COLLEGE FESTS</a></li>        
    <li><a href="@{Application.resr()}" >TICKET ENQUIRIES</a></li>    
        <li><a href="@{Application.coni()}" >CONTACT US</a></li> 
-        <li><a href="@{Application.DET()}" >Users</a></li> 
+     
 <li><a href="logout" >SIGN OUT</a></li> 
 <li><a href="selection" >SELECTION</a></li> 
 
@@ -24,16 +24,18 @@
 <img src="@{'/public/images/Capture.png'}"   height="10%" width="10%" /><BR><br><br>  
     </div>
      <div class="content">
+        
 #{if start}
     <div class="post">
        <h2 class="post-username">
                <a href="#">${start.username}</a>
-          </h2>
+         <h2 class="use">${email}</h2>
+          
         <div class="post-metadata">
            <span class="post-date">${start.postedAt.format('dd MMM yy')}</span>
         </div>
         <div class="post-phno">
-                  phone number: ${start.phno}
+            <h2> phone number: ${start.phno}</h2>
         </div>
     </div>
   

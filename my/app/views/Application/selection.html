@@ -6,7 +6,7 @@
  <div class="topbar-inner">      
   <div class="container-fluid"> 
      <ul class="pills">     
-     <li><a class="brand" href="@{Application.index()}" class="active">IVR WIDGETS</a></li>             
+     <li><a class="brand" href="i" class="active">IVR WIDGETS</a></li>             
  <li ><a href="@{Application.wedding()}" >WEDDINGS</a></li>          
   <li><a href="@{Application.medical()}" >MEDICAL ENQUIRIES</a></li>      
       <li><a href="@{Application.fest()}">COLLEGE FESTS</a></li>        
@@ -24,9 +24,10 @@
    </td>
    <td>
     <div class="span4">  
+        
     #{form @store()}
      #{field 'username'}
-    <label for="username" class="username-field">USERNAME:</label>
+    <label for="username" class="username-field">location:</label>
                <input type="text" name="username" id="username" value="${flash.username}" />
         #{/field}
         CHOOSE
@@ -34,15 +35,15 @@
        #{field 'phno'}  
         <select id="phno" name="phno">
 <option value=00>select</option>
-<option value=197500>197500</option>
-<option value=197600>197600</option>
-<option value=197700>197700</option>
-<option value=197800>197800</option>
-<option value=197900>197900</option>
-<option value=198000>198000</option>
-<option value=198100>198100</option>
-<option value=198200>198200</option>
-<option value=199000>199000</option></select>
+<option value=9884561231>9884561231</option>
+<option value=9760000000>9760000000</option>
+<option value=9770000000>9770000000</option>
+<option value=9780000000>9780000000</option>
+<option value=9790000000>9790000000</option>
+<option value=9800000000>9800000000</option>
+<option value=9810000000>9810000000</option>
+<option value=9820000000>9820000000</option>
+<option value=9900000000>9900000000</option></select>
          #{/field}<br><br>
  <input type=submit value=submit>
    #{/form}

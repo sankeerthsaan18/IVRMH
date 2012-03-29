@@ -1,6 +1,7 @@
 package models.casino.jpa;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
 
@@ -11,17 +12,21 @@ import play.db.jpa.Model;
 @Entity
 public class User extends Model {
 
-	public String email;
+	
+    
+    public String email;
 
 	public String pwHash;
 
 	public String confirmationCode;
 
 	public String recoverPasswordCode;
-
+        
+public Date postedAt;
 
 
 	private ArrayList<String> roles;
+    
 	
 
 	public User(String email, String passwordHash, String confirmationCode) {
@@ -29,7 +34,7 @@ public class User extends Model {
 		this.email = email;
 		this.pwHash = passwordHash;
 		this.confirmationCode = confirmationCode;
-
+                this.postedAt=new Date();
 		this.roles = new ArrayList<String>();
 	}
 
@@ -72,7 +77,6 @@ public class User extends Model {
 		return roles;
 		
 	}
-
-
-
+ 
+ 
 }
