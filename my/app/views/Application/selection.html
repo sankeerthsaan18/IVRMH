@@ -1,4 +1,4 @@
-﻿#{extends 'main.html' /}
+#{extends 'main.html' /}
 <html>
     <title>IVR WIDGET</title>
 <body>
@@ -7,14 +7,14 @@
   <div class="container-fluid"> 
      <ul class="pills">     
      <li><a class="brand" href="i" class="active">IVR WIDGETS</a></li>             
- <li ><a href="@{Application.wedding()}" >WEDDINGS</a></li>          
+  <li ><a href="@{Application.wedding()}" >WEDDINGS</a></li>          
   <li><a href="@{Application.medical()}" >MEDICAL ENQUIRIES</a></li>      
       <li><a href="@{Application.fest()}">COLLEGE FESTS</a></li>        
    <li><a href="@{Application.resr()}" >TICKET ENQUIRIES</a></li>    
        <li><a href="@{Application.coni()}" >CONTACT US</a></li> 
         <li><a href="@{Application.DET()}" >USERS</a></li> 
-<li><a href="logout" >SIGN OUT</a></li> 
 <li><a href="selection" >SELECTION</a></li> 
+<li><a href="logout" >SIGN OUT</a></li> 
  </ul>
                      
   </div></div></div>
@@ -27,11 +27,11 @@
         
     #{form @store()}
      #{field 'username'}
-    <label for="username" class="username-field">location:</label>
+    <label for="username" class="username-field">LOCATION:</label>
                <input type="text" name="username" id="username" value="${flash.username}" />
         #{/field}
-        CHOOSE
-        <label for="num">  phone number:</label>
+        
+        <label for="num">CHOOSE NUMBER:</label>
        #{field 'phno'}  
         <select id="phno" name="phno">
 <option value=00>select</option>
