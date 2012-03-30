@@ -8,22 +8,44 @@ and open the template in the editor.
 <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/main.css'}"> 
 <script src="@{'/public/javascripts/n.js'}" type="text/javascript" charset="${_response_encoding}"></script>
 </head>
-
+<html>
+    <title>IVR WIDGET</title>
+<body>
 <div class="topbar">     
  <div class="topbar-inner">      
   <div class="container-fluid"> 
      <ul class="pills">     
-     <li>IVR WIDGETS</li>             
-     <li><a href="/">Home</a></li>
+                
+     <li><a href="/">HOME</a></li>
 <li><a href="login" >SIGN IN</a></li> 
 <li><a href="registration" >REGISTER</a></li> 
  </ul>
                      
         </div></div></div> 
-		#{extends 'casino/Secure/layout.html' /}
+		
 
 
-<div class="content">
+
+<div class="container-fluid">      
+<div class="sidebar">
+<table class="bordered-table"><tr><td>
+           
+<img src="@{'/public/images/Capture.png'}"   height="80%" width="50%" /><BR><br><br>  
+
+<font color="brown"> Welcome Guest!!!</font>
+    </td></tr><tr><td><br>
+  <b> <font color="brown">Our Widgets:</font>  </b>  <br>
+   <marquee  scrollamount="2" direction="left" loop="true" width="100%" onmouseover="this.stop()" onmouseout="this.start()"> 
+<center>
+ 
+<strong> <br>
+<i><h5>1.WEDDING EVENTS</h5></i>
+<i><h5>2.MEDICAL ENQUIRES</h5></i>
+<i><h5>3.COLLEGE FESTS</h5></i> 
+<i><h5>4.TICKET ENQUIRES</h5></i>
+</strong></center></marquee>  
+       </td></tr>     </table>    </div>   
+  <div class="content">
    <!-- hero unit for a primary marketing message -->    
 <table class="bordered-table"><tr><td>  
         
@@ -31,13 +53,10 @@ and open the template in the editor.
      <p><H5><i>IVR technologies provide a company encounter which is usually as 
 pleasing as it is remarkable. Listening to a automated voice offering information, 
 initiating a response via a number sequence input, and getting a personal touch from a live 
-agent � these emphasize a customers  importance as he OR she becomes a valued player 
-in an exhilarating technology play constructed for their own comfort.</i><H5></p>          </td></tr></table>  
+agent  these emphasize a customers  importance as he OR she becomes a valued player 
+in an exhilarating technology play constructed for their own comfort.</i><H5></p>          </td></tr></table> 
  
- <div class="row"> 
-     <div class="span4"> 
-         <img src="@{'/public/images/Capture.png'}"   height="80%" width="50%" /><BR><br><br>  
-     </div>
+ <div class="row">       
  <div class="span4">           
 <h5><FONT COLOR="Brown">MEDICAL ENQUIRY</font></h5> 
 
@@ -80,4 +99,5 @@ To leave their expeirences and movements in the form voice.
 </div>
 </div>       
 
-	</html>
+</body></html>
+
